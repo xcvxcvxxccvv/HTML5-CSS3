@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style>
+        .box1 {
+            width: 40px;
+            height: 40px;
+            background: #099;
+            margin: 10px 0;
+            transition-property: width;
+            transition-property: height;
+            transition-property: background;
+            transition-duration: 2s;
+        }
+
+        .box1:hover {
+            width: 100%;
+            height: 70px;
+        }
+
+        .green:hover {
+            background: #ccc;
+        }
+
+        .yellow:hover {
+            background: #FF9;
+        }
+
+        .red:hover {
+            background: #F33;
+        }
+
+        .box2_list {
+            padding: 20px;
+        }
+
+        .test {
+            width: 5%;
+            height: 65px;
+            background: #FF9;
+            color: #000;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .box2_list:hover .test {
+            margin-left: 90%;
+            background: #066;
+            border-radius: 25px;
+            transform: rotate(360deg);
+        }
+
+        .ease {
+            transition: all 3s ease;
+        }
+
+        .ease-in {
+            transition: all 3s ease-in;
+        }
+
+        .ease-out {
+            transition: all 3s ease-out;
+        }
+
+        .ease-in-out {
+            transition: all 3s ease-in-out;
+        }
+
+        .linear {
+            transition: all 3s linear;
+        }
+
+        .cubic-bezier {
+            transition: all 3s cubic-bezier(0.42, 0, 0.58, 1);
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="box1 green"></div>
+<div class="box1 yellow"></div>
+<div class="box1 red"></div>
+
+<div class="box2_list">
+    <div class="test ease">ease</div>
+    <div class="test ease-in">ease - in</div>
+    <div class="test ease-out">ease - out</div>
+    <div class="test ease-in-out">ease - in -out</div>
+    <div class="test ease linear">linear</div>
+    <div class="test cubic-bezier">cubic - bezier</div>
+</div>
+</body>
+</html>

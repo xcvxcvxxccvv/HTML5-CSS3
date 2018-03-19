@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <script src="./JQuery/jQuery Migrate v1.4.1.js" type="text/javascript"></script>
+    <script src="./JQuery/jq (1).js" type="text/javascript"></script>
+    <script src="./JQuery/jQuery v3.2.1.js" type="text/javascript"></script>
+    <script src="./JQuery/jquery-1.9.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn-paused").click(function () {
+                $("#js_wrap").addClass("paused");
+            })
+            $("a").on("click", function (e) {
+                $("#js_wrap").removeClass("paused");
+                $("#js_wrap").attr("class", "wrap" + $(e.target).attr("class").split("-")[1]);
+            });
+        });
+
+        function speedChange(source) {
+            $("#js_wrap").attr('class', "wrap");
+            $("#js_wrap").addClass(source.className);
+        }
+    </script>
+    <style>
+        .cotainer {
+            width: 162px;
+            height: 140px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            position: relative;
+            background: #666;
+        }
+
+        .wrap {
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url(ma.jpg) 0 0 no-repeat;
+
+            animation-name: runing_pic; /*动画名称*/
+            animation-duration: 1500ms; /*动画运行时间*/
+            animation-iteration-count: infinite; /*设置动画无限播放*/
+            animation-timing-function: step-end; /*马上跳转到下一帧结束状态*/
+        }
+
+        button[class^=run_], .btn-paused {
+            line-height: 30px;
+            border: 1px solid #999;
+            text-align: center;
+            float: left;
+            padding: 0 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            display: block;
+            color: #000;
+        }
+
+        @-webkit-keyframes runing_pic {
+            0% {
+                background-position: 0 0;
+            }
+            10% {
+                background-position: 0 0;
+            }
+            25% {
+                background-position: -160px 2px;
+            }
+            45% {
+                background-position: -322px 3px;
+            }
+            65% {
+                background-position: 0 -154px;
+            }
+            75% {
+                background-position: -162px -154px;
+            }
+            85% {
+                background-position: -324px -154px;
+            }
+            100% {
+                background-position: -324px -154px;
+            }
+        }
+
+        .xfast {
+            -webkit-animation-duration: 100ms;
+        }
+
+        /*动画运行时间*/
+        .fast {
+            -webkit-animation-duration: 500ms;
+        }
+
+        /*动画运行时间*/
+        .normal {
+            -webkit-animation-duration: 3000ms;
+        }
+
+        /*动画运行时间*/
+        .slow {
+            -webkit-animation-duration: 1000ms;
+        }
+
+        /*动画运行时间*/
+        .paused {
+            -webkit-animation-play-state: paused;
+        }
+
+        /*动画运行时间*/
+
+    </style>
+</head>
+
+<body>
+<div class="cotainer">
+    <div class="wrap" id="js_wrap"></div>
+</div>
+<button onclick="speedChange(this)" class="run_xfast xfast">最快</a></button>
+<button onclick="speedChange(this)" class="run_fast fast">快</a></button>
+<button onclick="speedChange(this)" class="run_normal normal">慢</a></button>
+<button onclick="speedChange(this)" class="run_slow slow">正常</a></button>
+<button class="btn-paused paused">暂停</button>
+</body>
+</html>

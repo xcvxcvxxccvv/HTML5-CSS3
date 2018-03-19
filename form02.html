@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5新增结构性元素</title>
+<style>
+*{ margin:0; padding:0;}
+body{ margin:20px 0}
+.aa{
+	width:1200px; h
+	eight:auto; 
+	margin:0 auto; 
+	line-height:26px;
+	margin:0 auto;
+	}
+.cc{
+	width:900px;
+	height:auto;
+	margin:0 auto;
+	margin-bottom:20px;
+	padding:20px 40px;
+	background:#FDFEDA
+	}
+
+.cc1{
+	width:900px;
+	height:auto;
+	margin:0 auto;
+	padding:40px 40px;
+	background:#FDFEDA;
+	}
+
+#header,#nav,#footer,#bodyder{
+	width:820px;
+	height:auto; 
+	margin:0 auto;
+	margin-bottom:20px;
+	line-height:60px;
+	background:#333; 
+	text-align:center;
+	border-radius:20px;
+	}
+#bodyder{height:240px; background:none;}	
+.article{width:520px;
+		height:240px; 
+		float:left;
+		background:#333;
+		margin-right:20px;
+		border-radius:20px;
+		}
+
+.section{width:480px;
+		height:120px;
+		margin:10px auto;
+		background:#000; 
+		border-radius:20px;
+		}
+.section h6{color:#C30;}
+
+.sidebar{width:280px;
+		height:240px;
+		background:#333; 
+		text-align:center;
+		background:#333;
+		float:right;
+		border-radius:20px;
+		}
+
+
+h3{ 
+	color:#C30;
+	line-height:90px;
+	}
+span{ 
+	color:#999; 
+	font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="aa">
+    <div class="cc">
+        <h3>&lt;section&gt;</h3>
+        <p>标签：定义文档中节（section,区段）<br />比如：章节、页眉、页脚或者是文档中的其它部分<br />
+        一般用于成节的内容，会在文档流中开始一个新节。
+        
+        </p>
+        
+        <h4>例：</h4>
+        
+        <section cite="https://baike.baidu.com/item/%E4%B8%AD%E7%A7%8B%E8%8A%82/128234?fr=aladdin">
+            <h4>中秋节</h4>
+            <p>中秋节，又称月夕、秋节、仲秋节、八月节、八月会、追月节、玩月节、拜月节、女儿节或团圆节，
+            是流行于中国众多民族与汉字文化圈诸国的传统文化节日，时在农历八月十五；因其恰
+            值三秋之半，故名，也有些地方将中秋节定在八月十六。</p>
+            <span>(此段&lt;section&gt;文章内有参考文献的URL引用(审查源代码时可见&lt;cite&gt;),也可不写引用URL)</span>
+        </section>
+    </div>
+        
+    <div class="cc">
+        <h3>&lt;article&gt;</h3>标签：定导航链接部分。
+        <p>article它是一个特殊的section标签，它比section具有更明确的语义，它代表一个独立的完整的相关内容，或独立于页面的其它内容使用。<br />
+        
+        比如：可以是来自一个外部的新闻提供者的一篇新的文章，或者是来自BLOG的文本，或者
+        是来自论坛的文本，或者是来自其它外部源的内容</p>
+        
+        <h4>例：</h4>
+        
+        <article>
+            <a href="https://tieba.baidu.com/f?kw=%E6%B1%89%E6%9C%8D&ie=utf-8"><p>汉服吧:汉民族传统文化的传承和推广</p></a><br />
+            <span>???</span>
+    	</article>
+    </div>
+
+    <div class="cc">
+        <p><h3>&lt;nav&gt;</h3>标签：定义导航链接部分。</p>
+    </div>
+
+
+    <div class="cc">
+        <h3>&lt;aside&gt;</h3>
+        <p>标签：它用来装载非正文的内容，被视为页面里面一个单独的部分。<br />
+        它包含的内容与页面的主要的内容是分开的，可以被删除，而不会影响到页面的内容、章节或是页面所要传达的信息。<br />
+        
+        定义article以外的内容,&lt;aside&gt;的内容可以作为文章的内容。
+        </p>
+        
+        <h4>例：</h4>
+    </div>
+            
+
+            
+
+    <div class="cc">
+        <h3>&lt;hgroup&gt;</h3>
+        <p>标签：用于对网页或者区段(section)的标题（h1-h6）进行组合。<br />-h
+        
+        </p>
+        
+        <h4>例：</h4>
+        
+    </div>
+
+
+    <div class="cc">
+        <h3>&lt;footer&gt;</h3>
+        <p>标签：它定义section或文档的页脚，包含了与页面、文章或是部分内容有关的信息。<br />
+        
+        </p>
+        
+        <h4>例：</h4>
+    </div>
+    
+    <div class="cc">
+        <h3>&lt;header&gt;</h3>
+        <p>标签：定义文档的页眉，通常是一些引导和导航信息。它不局限于写在网页的头部，也可以写在内容里面。<br />
+        
+        </p>
+        
+        <h4>例：</h4>
+    </div>
+
+
+    <div class="cc">
+        <h3>&lt;figure&gt;</h3>
+        <p>标签：用于对元素进行组合。多用于图片与图片的描述组合。<br />
+        
+        
+        </p>
+        <h4>例：</h4>
+    </div>
+
+
+    <div class="cc1">
+            <div id="header"><h3>&lt;div id="header"&gt;</h3></div>
+            <div id="nav"><h3>&lt;div id="nav"&gt;</h3></div>
+    
+            <div id="bodyder">                   
+                <div class="article"><h3>&lt;div class="article"&gt;</h3>
+                	<div class="section"><h6>&lt;div class="section"&gt;</h6></div>
+                </div>
+                
+                <div class="sidebar"><h3>&lt;div class="sidebar"&gt;</h3></div>               
+            </div>
+            
+            
+            <div id="footer"><h3>&lt;div id="footer"&gt;</h3></div>
+        </div>
+        
+    </div>    
+
+</div>
+
+</body>
+</html>

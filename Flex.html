@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>样式布局Columns与Flex</title>
+<style>
+*{ margin:0; padding:0;}
+.box{
+	width:100%;
+	height:550px;
+	background:#E0E4F5;
+	margin:10px 0;
+	
+	
+	-webkit-display:flex;
+	-ms-display:flex;
+	-moz-display:flex;
+	-o-display:flex;
+	
+	display:flex;
+	
+	
+	-webkit-flex-flow:reverse wrap;
+	
+	justify-content:center;
+	align-items:center;
+	}
+.C1{
+	width:200px;
+	height:100px;
+	background:#066;
+	border:6px solid #rgba(44,120,172,0.5);
+	
+/*	-webkit-column-rule:6px solid #rgba(44,120,172,0.5);
+	-ms-column-rule:6px solid #rgba(44,120,172,0.5);
+	-moz-column-rule:6px solid #rgba(44,120,172,0.5);
+	-o-column-rule:6px solid #rgba(44,120,172,0.5);
+	-webkit-column-rule:6px solid #rgba(44,120,172,0.5);
+	column-rule:6px solid #rgba(44,120,172,0.5);
+*/	}
+.C1 img{
+	width:100%;
+	height:100%;
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="C1"><img src="timg (1).jpg"></div>
+        <div class="C1"><img src="timg (3).jpg"></div>
+        <div class="C1"><img src="timg (4).jpg"></div>
+        <div class="C1"><img src="timg (5).jpg"></div>
+        <div class="C1"><img src="u=173286456,3868087001&fm=27&gp=0.jpg"></div>
+    </div>
+    </div>
+</body>
+</html>

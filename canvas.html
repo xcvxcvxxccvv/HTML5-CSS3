@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>H5小结</title>
+<style>
+#a{background:#669;} 
+#b{background:#969;} 
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+
+
+	window.onload=function(){	//加载JS
+
+	var c=document.getElementById("a");
+	var xx=c.getContext("2d"); //新建2D图形
+	var dd=c.getContext("2d"); //新建2D图形
+	var cc=c.getContext("2d"); //新建2D图形
+		
+	var x=c.width/2.7;
+	var y=c.height/2;
+	var r=40;
+	
+	xx.beginPath();  //开始绘制
+	
+	
+	xx.arc(x,y,r,0,2*Math.PI,true);
+	
+	xx.lineWidth=2;
+	xx.strokeStyle="#527bce"
+	xx.stroke();
+	
+	xx.fillStyle="#b61212";
+	xx.globalAlpha=0.4;
+	xx.shadowOffsetX=0;
+	xx.shadowOffsetY=10;
+	xx.shadowBlur=8;
+	xx.shadowColor="rgba(41,110,179,0.8)";
+	xx.fill();
+	
+
+
+
+
+	var x1=c.width/2;
+	var y1=c.height/2;
+	var r1=40;
+	
+	dd.beginPath();  //开始绘制
+	
+	
+	dd.arc(x1,y1,r1,0,2*Math.PI,true);
+	
+	dd.lineWidth=2;
+	dd.strokeStyle="#527bce"
+	dd.stroke();
+	
+	dd.fillStyle="#ffde2a";
+	dd.globalAlpha=0.4;
+	dd.shadowOffsetX=0;
+	dd.shadowOffsetY=10;
+	dd.shadowBlur=8;
+	dd.shadowColor="rgba(41,110,179,0.8)";
+	dd.fill();
+	
+	
+	
+	var x2=c.width-185;
+	var y2=c.height/2;
+	var r2=40;
+	
+	cc.beginPath();  //开始绘制
+	
+	
+	cc.arc(x2,y2,r2,0,2*Math.PI,true);
+	
+	cc.lineWidth=2;
+	cc.strokeStyle="#527bce"
+	cc.stroke();
+	
+	cc.fillStyle="#1aaa28";
+	cc.globalAlpha=0.4;
+	cc.shadowOffsetX=0;
+	cc.shadowOffsetY=10;
+	cc.shadowBlur=8;
+	cc.shadowColor="rgba(41,110,179,0.8)";
+	cc.fill();
+	
+	
+	var d=document.getElementById("b");
+	var dd=d.getContext("2d"); //新建2D图形
+	
+	dd.beginPath();
+	dd.moveTo(100,40);
+	dd.lineTo(40,100);
+	dd.lineTo(40,200);
+	dd.lineTo(100,260);
+	dd.lineTo(200,260);
+	dd.lineTo(260,200);
+	dd.lineTo(260,100);
+	dd.lineTo(200,40);
+	dd.lineTo(100,40);
+
+	dd.lineWidth=4;
+	dd.strokeStyle="#fff";
+	dd.stroke();
+
+	dd.beginPath();
+	dd.moveTo(430,40);
+	dd.lineTo(330,100);
+	dd.lineTo(330,200);
+	dd.lineTo(430,260);
+	dd.lineTo(530,200);
+	dd.lineTo(530,100);
+	dd.lineTo(430,40);
+
+	dd.lineWidth=4;
+	dd.strokeStyle="#fff";
+	dd.stroke();
+
+	dd.beginPath();
+	dd.moveTo(700,50);
+	dd.lineTo(600,150);
+	dd.lineTo(700,250);
+	dd.lineTo(800,150);
+	dd.lineTo(700,50);
+	
+	dd.lineWidth=4;
+	dd.strokeStyle="#fff";
+	dd.stroke();
+
+	dd.stroke();
+
+	dd.beginPath();
+	dd.moveTo(920,100);
+	dd.lineTo(820,200);
+	dd.lineTo(1020,200);
+	dd.lineTo(920,100);
+	
+	dd.lineWidth=4;
+	dd.strokeStyle="#fff";
+	dd.stroke();
+
+	}	
+
+</script>
+
+
+
+<div >
+	<canvas id="a" height="200" width="500">您的浏览器不支持canvas。</canvas>
+</div>
+
+<div >
+	<canvas id="b" height="300" width="1060">您的浏览器不支持canvas。</canvas>
+</div>
+</body>
+</html>

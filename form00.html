@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5新增form表单验证属性</title>
+<style>
+div{ 
+	width:auto;
+	height:auto;
+	margin:10px;
+	padding:20px;
+	border:1px solid #0C9;
+	float:left;
+	}
+h1{
+	width:auto;
+	height:auto;
+	background:#099;
+	color:#FFF;
+	text-align:center;
+	border:1px solid #0C9;
+	margin:20px auto;
+	 }
+</style>
+
+</head>
+
+<body>
+<!--
+method="post/get"，指的是提交数据的方式，这里说说它们的用法：
+
+GET方法：
+
+使用GET方法时，查询字符串（键值对）被附加在URL地址后面一起发送到服务器：
+
+/helloWorld/first.jsp?name1=value1&name2=value2
+
+特点：
+
+GET请求能够被缓存
+
+GET请求会保存在浏览器的浏览记录中
+
+以GET请求的URL能够保存为浏览器书签
+
+GET请求有长度限制
+
+GET请求主要用以获取数据.
+
+action="#"
+
+"#" 锚标签，写上这个代表是提交数据到本页，而不是其他页面，相当于不做任何操作。如果action="hello.do"，那么它会提交数据到跟hello.do匹配的servlet。
+-->
+<h1 class="cc">HTML5新增form表单验证属性</h1>
+<div>   
+    <form action="#" method="get">
+    email
+        <br />
+        <input type="email" name="user_email" /> <!--email类型用于应该包含E-mail地址的输入域在提交表彰时，会自动验证域的值--电子邮箱格式验证结果：必须要有@符号与后缀-->
+        <input type="submit" value="提交" />
+    </form>
+    <br />
+    <br />
+</div> 
+   
+<div>    
+    <form action="#" method="get">
+    url 
+        <br />
+        <input type="url" name="url_email" /> <!--email类型用于应该包含URL的输入域在提交表彰时，在提交表单时，会自动验证URL域的值--URL域格式验证结果：必须要输入以HTTP://开头的完整链接-->
+        <input type="submit" value="提交" />
+    </form>
+        <br />
+        <br />
+</div>
+
+<div>    
+    <form action="#" method="get">
+    number
+        <br />
+        <input type="number" name="user_number" max="100" />  <!--number类型用于应该包含数值的输入域，并且能够设定对所接受的数字的限定--number域格式验证结果：必须输入100以下的值-->
+        <input type="submit" value="提交">	
+        <br />
+        <input type="number" name="user_number" max="100" min="1" value="1" step="5" />  <!--设定number最大数值为100，最小值为1，初始值为1，之后每次输入（或上下翻动小箭头）数值均以5数值上下调-->
+        <input type="submit" value="提交">	
+    </form>    
+</div>
+
+<div>    
+    range滑块控件
+    <input type="range" name="user_range" max="100" min="1" />  <!----range类型用于应该包含一定范围内数学值的输入域，显示的内容为滑动条---->
+</div>
+
+    
+<div>    
+    <h2>Date Pickers数据检出器</h2>
+    <p>date--选取日、月、年</p>
+    <p>month--选取月、年</p>
+    <p>week--选取周、年</p>
+    <p>time--选取时间（小时和分钟）</p>
+    <p>datetime--选取时间、日、月、年（UTC时间）</p>
+    <p>datetime-local--选取时间、日、月、年（本地时间）</p>
+    <form action="#" method="get">    
+        <input type="date" name="user_date">   <br />
+        <input type="month" name="user_month">   <br />
+        <input type="week" name="user_week">   <br />
+        <input type="time" name="user_time">   <br />
+        <input type="datetime" name="user_datetime">   <br />
+        <input type="datetime-local" name="datetime-local">   <br />
+        
+        <input type="submit" value="提交">	
+    </form>
+</div>   
+
+
+<div>
+aotocomplete:规定当前页面加载时input元素子节点默认获得焦点（需另设置<br />样式）
+<!-----aotocomplete:规定当前页面加载时<input>元素子节点默认获得焦点（需另设置样式）----->
+	<p>请仔细阅读许可协议</p>
+	<p>
+    	<textarea cols="45" rows="5">
+        备注：
+        </textarea>
+    </p>
+   <br /> 
+   <input style="background:#FCF" type="submit" value="同意" autofocus"on" />
+   <input type="submit" value="拒绝" /> 
+</div>    
+    
+</body>
+</html>

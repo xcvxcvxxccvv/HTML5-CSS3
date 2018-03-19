@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    height: auto;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.head-box, .body-box {
+    height: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+header {
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 100%;
+    height: 100px;
+    background: url(../images/ss.jpg);
+    background-size: 1920px auto;
+    text-align: center;
+    line-height: 45px;
+}
+
+section {
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    line-height: 30px;
+}
+
+.box-0 {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    color: #97D6DF;
+}
+
+.box-0 a {
+    display: block;
+    width: 100%;
+    height: auto;
+    color: #97D6DF;
+}
+
+.box-0 a:hover {
+    background: #97D6DF;
+    color: #fff;
+}
+
+.box-0 ul {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #97D6DF;
+    border-bottom: 2px solid #97D6DF;
+    padding: 20px;
+    /*    display: none;
+    */
+    display: flex;
+    display: -webkit-flex; /* Safari */
+
+    flex-wrap: wrap;
+    /*    flex-direction: row;
+    */
+}
+
+.box-0 li {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border: 2px solid #97D6DF;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.demo ul li {
+    background: #fff;
+}
+
+.box-0:hover ul {
+    /*    display: block;
+    */
+}

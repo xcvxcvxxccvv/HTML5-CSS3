@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5新增form元素&form属性</title>
+<style>
+div{ 
+	width:auto;
+	height:auto;
+	margin:10px;
+	padding:20px;
+	border:1px solid #0C9;
+	float:left;
+	}
+h1{
+	width:auto;
+	height:auto;
+	background:#099;
+	color:#FFF;
+	text-align:center;
+	border:1px solid #0C9;
+	margin:20px auto;
+	 }
+</style>
+</head>
+
+<body>
+<h1 class="cc">HTML5新增form元素</h1>
+
+<div>
+    output元素：用于浏览器中显示结果或脚本输出,包含完整的开始和结束标签<br /><br /> 
+    
+	<script>
+		function multi(){
+			a=parseInt(prompt("请输入第1个数字",0));  //prompt:显示一个模式消息框
+			b=parseInt(prompt("请输入第2个数字",0));
+			document.forms['aa']['result'].value=a*b;
+		}
+    </script>
+    
+    <form action="#" method="get" name="aa">
+       a和b的乘积为：<output name="result"></output>
+    </form>
+</div>
+
+
+
+<div>
+    <!--<datalist> 标签定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值。
+    
+    datalist 及其选项不会被显示出来，它仅仅是合法的输入值列表。
+    
+    请使用 input 元素的 list 属性来绑定 datalist。-->  
+    <form action="#" method="get" id="formll">
+    datalist元素:用于为输入提供一个可选的列表，用户可能直接选择在列表中的某一项，从而免去了输入的麻烦。<br />
+    请输入网址：<input type="url" list="url_list" name="userlist"><br />
+            <datalist id="url_list">
+                <option label="百度" value="http://www.baidu.com" />
+                <option label="新浪" value="http://www.sina.com" />
+                <option label="QQ" value="http://www.qq.com" />
+            </datalist>
+    
+            <input type="submit" value="提交" />
+    </form>
+    
+        <br />
+        <br />
+</div>
+
+
+<div>
+    <form action="#" method="get">
+    keygen元素：密钥对生器，能够使用户验证更为可靠，用户提交表单时会生成两个键，一个私钥，一个公钥，私钥保存客户端而公钥会发送到服务器<br /><br /> 
+        请输入用户名：<input type="text" name="user_name" />
+        请选择加密强度:<keygen name="sexurity"/>
+    </form>
+</div>
+
+
+<div>
+	novalidate属性:此属性用于提交表单时取消整个表单的验证，即关闭对表单内的所有元素的有效检查。<br />
+    如果只取消表单中较少部分内容的验证而不妨碍提交的大部分内容，则可以将些属性单独用于form中的这些元素<br /><br /> 
+    <form action="#" method="get" novalidate>
+        请输邮箱地址：<input type="text" name="user_name" />
+        <input type="submit" value="提交"/>
+    </form>
+</div>
+
+
+
+<div>    
+    aotocomplete属性:当属性用于form元素时，所有从属于该form的元素都具备自动完成功能。<br />
+    如果要使用于个别关闭自动完成功能则单独为该元素指定aotocomplete="off"即可。
+    <!----aotocomplete:规定input元素输入字段时是否开户自动完成功能---->    
+    <form action="#" method="get">
+        用户名：<input type="text" autocomplete="off" name="username" /><br /><br />
+        密码：<input type="text" autocomplete="on" name="password" /><br /><br />
+        <input type="submit" value="提交" />
+    </form>
+</div>
+
+
+
+</body>
+</html>

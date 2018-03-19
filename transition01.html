@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css变形</title>
+<style>
+*{ margin:0; padding:0;}
+a{ text-decoration:none; color:#fff;}
+ul,li{ list-style:none;}
+.menu{
+	width:1200px;
+	height:auto;
+	border-top:4px solid #000;
+	margin:20px auto;
+	}
+.menu li{
+	width:90px;
+	height:50px;
+	float:left;
+	margin:0 5px;
+	}	
+.menu a{ 
+	width:100%;
+	height:100%;
+	background:#066;
+	display:block;
+	line-height:50px;
+	font-size:18px;
+	text-align:center;
+	border-radius:0 0 5px 5px;
+	text-shadow:0 1px 1px rgba(0,0,0,0.5);
+	}
+.menu ul li.rotate a{background:#999;}
+	
+.menu ul li.scale a{background:#9C9;}	
+.menu ul li.scale-x a{background:#99F;}	
+.menu ul li.scale-y a{background:#96F;}	
+
+.menu ul li.translat a{background:#969;}	
+.menu ul li.translat-x a{background:#639;}	
+.menu ul li.translat-y a{background:#606;}
+	
+.menu ul li.skew a{background:#930;}	
+.menu ul li.skew-x a{background:#C33;}	
+.menu ul li.skew-y a{background:#C66;}	
+
+.menu ul li.mutil a{background:#C99}	
+.menu ul li.origin a{background:#CCC}	
+
+.menu li.rotate a:hover{transform:rotate(25deg);}	
+
+.menu li.scale a:hover{transform:scale(0.8,0.8);}	
+.menu li.scale-x a:hover{transform:scaleX(0.5);}	
+.menu li.scale-y a:hover{transform:scaleY(0.5);}	
+
+.menu li.translat a:hover{transform:translate(-10px,-10px);}	
+.menu li.translat-x a:hover{transform:translateX(10px)}	
+.menu li.translat-y a:hover{transform:translateY(10px);}	
+
+.menu li.skew a:hover{transform:skew(45deg,15deg);}	
+.menu li.skew-x a:hover{transform:skewX(30deg);}	
+.menu li.skew-y a:hover{transform:skewX(30deg);}	
+
+.menu li.mutil a:hover{transform:matrix(0.866,0.5,-0.5,0.866,0,0);}	
+.menu li.origin a:hover{transform-origin:20% 40%;-webkit-transform: rotate(45deg);}	
+
+</style>
+</head>
+
+<body>
+<div class="menu">
+    <ul>
+    	<li class="rotate"><a href="">rotate</a></li>
+        
+    	<li class="scale"><a href="">scale</a></li>
+    	<li class="scale-x"><a href="">scale-x</a></li>
+    	<li class="scale-y"><a href="">scale-y</a></li>
+
+    	<li class="translat"><a href="">translat</a></li>
+    	<li class="translat-x"><a href="">translat-x</a></li>
+    	<li class="translat-y"><a href="">translat-y</a></li>
+
+    	<li class="skew"><a href="">skew</a></li>
+    	<li class="skew-x"><a href="">skew-x</a></li>
+    	<li class="skew-y"><a href="">skew-y</a></li>
+
+    	<li class="mutil"><a href="">mutil</a></li>
+    	<li class="origin"><a href="">origin</a></li>
+
+    </ul>
+</div>
+</body>
+
+
+</html>

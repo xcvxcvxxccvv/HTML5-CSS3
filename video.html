@@ -1,0 +1,23 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <video src="ckxt-bp.mp4" width="500" height="600" controls="controls">您的浏览器不支持此视频功能</video>
+    <button onclick="iloop()">自动循环</button>
+    
+    <script type="text/javascript">
+        var myloop=document.getElementsByTagName("button");
+        function iloop(){
+            myloop.loop=true;
+            myloop.load();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5-WEB储存</title>
+<style>
+*{ margin:0; padding:20;}
+span{ color:#666; line-height:30px; font-size:14px;}
+h3{ color:#09C}
+h1{ text-align:center}
+</style>
+</head>
+
+<body  class="a">
+<div style="width:1200px; height:auto; margin:0 auto;">
+    <h1>W E B 储 存</h1>
+    
+    <div style="width:500px;height:500px; margin-right:20px; float:left; padding:40px;background:#FDFEDA">
+        <span><h3>localStorage -- 没有时间限制的储存</h3>
+        此方法存储的数据没有时间限制。<br />
+        第二天、第周或一年之后，数据依然可用。<br />
+        （使用本地电脑储存）<br /><br />
+        </span>
+        
+        <ul>
+            <li>
+                <p><h3>创建和访问localStorage</h3></p>
+                <script type="text/javascript">
+                    localStorage.lastname="五月花";
+                    document.write(localStorage.lastname);
+                </script>
+            </li>
+        
+            <li>
+                <p>通过localStorage对用户访问页面的次数进行计数<span>(同一台电脑累计访问计数)</span></p>
+                <script type="text/javascript">
+                    if(localStorage.pagecount){
+                        localStorage.pagecount=Number(localStorage.pagecount)+1;
+                    }
+                    else{
+                        localStorage.pagecount=1;
+                    }
+                    document.write("访问"+localStorage.pagecount+"次");
+                </script>
+            </li>
+        </ul>
+    </div>
+
+    <div style="width:500px;height:500px; margin-right:20px; float:left; padding:40px; background:#DEF9FA">
+        <span><h3>sessionStorage -- 针对一个session的数据储存</h3>
+        用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。
+        </span><br /><br />
+        
+        <ul>
+            <li>
+                <p><h3>创建和访问sessionStorage</h3></p>
+                <script type="text/javascript">
+                    sessionStorage.lastname="五月花";
+                    document.write(sessionStorage.lastname);
+                </script>
+            </li>
+        
+            <li>
+                <p>通过sessionStorage对用户访问页面的次数进行计数<span>(重新打开页面后会重新计数)</span></p>
+                <script type="text/javascript">
+                    if(sessionStorage.pagecount){
+                        sessionStorage.pagecount=Number(sessionStorage.pagecount)+1;
+                    }
+                    else{
+                        sessionStorage.pagecount=1;
+                    }
+                    document.write("访问"+sessionStorage.pagecount+"次");
+                </script>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
